@@ -119,7 +119,7 @@ class BLECentralViewController : UIViewController, CBCentralManagerDelegate, CBP
         self.RSSIs.append(RSSI)
         peripheral.delegate = self
         self.baseTableView.reloadData()
-        if blePeripheral == nil {
+        if blePeripheral != nil {
             print("Found new pheripheral devices with services")
             print("Peripheral name: \(String(describing: peripheral.name))")
             print("**********************************")
